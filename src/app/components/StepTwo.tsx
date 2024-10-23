@@ -65,7 +65,6 @@ export default function StepTwo() {
 
         // Simulate an API call
         await new Promise((resolve) => setTimeout(resolve, 2000)); // Mock delay
-        setLoading(false); // Set loading to false after the action
     };
 
     const handleBack = () => {
@@ -139,7 +138,7 @@ export default function StepTwo() {
                             </div>
                         </CardContent>
                         <CardFooter className="gap-2">
-                            <Button type="button" variant="secondary" onClick={handleBack}>
+                            <Button type="button" variant="secondary" onClick={handleBack} disabled={loading}>
                                 <CircleChevronLeft/> Back
                             </Button>
                             <Button type="submit" disabled={loading}>
