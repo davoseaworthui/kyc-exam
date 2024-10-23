@@ -105,7 +105,7 @@ export default function StepTwo() {
                                                                     'Select a sport'}/>
                                                     </SelectTrigger>
                                                     <SelectContent>
-                                                        {optionsMap[stepOneData.interest].map(option => (
+                                                        {optionsMap && optionsMap[stepOneData.interest] && optionsMap[stepOneData.interest].map(option => (
                                                             <SelectItem key={option} value={option}>
                                                                 {option}
                                                             </SelectItem>
